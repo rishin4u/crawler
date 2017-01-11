@@ -62,6 +62,9 @@ for category in cat_urls:
 			prod['product_link'] = product_url
 			if(db.checkExisting(productcoll,prod)):
 		                continue
+			#if(db.checkExisting(catcollection,{'url':category_url})):
+		        #        continue
+
 
 			prod['fetched'] =0
 			print(prod)

@@ -14,6 +14,7 @@ for product in results:
 		title = re.sub('<[^<]+?>', '', str(title))
 		update ={"title":title,"fetched":1}
 		db.update(productcoll,product,update)
+		print(title)
  	except:
 		exc_type, exc_obj, exc_tb = sys.exc_info()
 	        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
