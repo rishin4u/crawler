@@ -10,5 +10,5 @@ import re,urlparse,subprocess
 from db import DB
 connection = Connection()
 db = connection.ecom
-catcollection = db.categoies
+catcollection = db.categories
 productcoll = db.products

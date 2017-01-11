@@ -77,8 +77,4 @@ for category in cat_urls:
 	     print(sys.exc_info())
 	     pass
 
-try:
-	subprocess.call("./ecom_fetch.py", shell=True)
 
-except:
-	pass
