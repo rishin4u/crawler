@@ -44,6 +44,7 @@ try:
 		continue
 	cat['title'] = utils.getVal(link,'title')
 	cat['description']=utils.getString(link)
+	print(cat)
 	catcollection.insert(cat)
 except:
      exc_type, exc_obj, exc_tb = sys.exc_info()

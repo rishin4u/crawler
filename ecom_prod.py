@@ -50,6 +50,7 @@ for category in cat_urls:
 		                continue
 
 			prod['fetched'] =0
+			print(prod)
 			db.insert(productcoll,prod)
 
 
