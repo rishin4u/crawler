@@ -16,12 +16,26 @@ while( not bool(parsed_url.scheme)):
 
 print("Enter Element :")
 element=raw_input().strip()
+while( not element):
+        print("Enter Valid Element :")
+        element=raw_input().strip()
+
+
 
 print("Enter Identifier :")
 identifier=raw_input().strip()
+while( not identifier):
+        print("Enter Valid Identifier :")
+        identifier=raw_input().strip()
+
+
 
 print("Enter value: ")
 value =raw_input().strip()
+while( not value):
+        print("Enter Valid Value :")
+        value=raw_input().strip()
+
 
 
 if(not site_url.endswith('/')):
