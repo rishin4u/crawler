@@ -51,8 +51,9 @@ try:
 	except:
 		pass
 	cat_url  = utils.getVal(link,'href')
+	print(cat_url)
         cat_url = utils.createUrl(url,cat_url)
-        cat_url = cat_url[:cat_url.rfind("/")+1]
+        #cat_url = cat_url[:cat_url.rfind("/")+1]
 	cat['url'] = cat_url
 	if(db.checkExisting(catcollection,cat)):
 		continue
@@ -60,6 +61,7 @@ try:
 	cat['description']=utils.getString(link)
 	print(cat)
 	catcollection.insert(cat)
+
 except:
      exc_type, exc_obj, exc_tb = sys.exc_info()
      fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]

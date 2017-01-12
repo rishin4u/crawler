@@ -57,15 +57,20 @@ for category in cat_urls:
 				pass
 			prod['site_url'] = site_url
 			product_url = utils.getVal(product_link,'href')
+			product_title = utils.getVal(product_link,'title')
 			product_url=utils.createUrl(site_url,product_url)
-		        product_url = product_url[:product_url.rfind("?")]
+		        #product_url = product_url[:product_url.rfind("?")]
 			prod['product_link'] = product_url
 			if(db.checkExisting(productcoll,prod)):
 		                continue
 			#if(db.checkExisting(catcollection,{'url':category_url})):
 		        #        continue
-
-
+			try:
+				prod["image_url"] = product_link.img["src"]
+			
+			except:	
+				prod["image_url"]=""
+			prod["title"] = product_title
 			prod['fetched'] =0
 			print(prod)
 			db.insert(productcoll,prod)
